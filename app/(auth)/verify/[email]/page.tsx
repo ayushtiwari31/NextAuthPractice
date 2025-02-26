@@ -75,7 +75,6 @@ export default function VerifyAccount() {
           {isSubmitting ? "Verifying..." : "Verify"}
         </button>
 
-        {message && <p className="text-green-500 mt-2">{message}</p>}
       </form>
       </div>
     </div>
