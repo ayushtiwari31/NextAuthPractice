@@ -3,16 +3,14 @@
 import { ApiResponse } from '@/types/ApiResponse';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
 
 import {
     Card,
-    CardHeader,
     Input,
-    Checkbox,
     Button,
     Typography,
 } from "@material-tailwind/react";
@@ -20,7 +18,6 @@ import {toast} from 'react-hot-toast'
 
 
 import axios, { AxiosError } from 'axios';
-import { Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { signUpSchema } from '@/schemas/signUpSchema';
 

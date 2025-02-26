@@ -10,7 +10,7 @@ import { verifySchema } from '@/schemas/verifySchema';
 import {toast} from 'react-hot-toast'
 
 export default function VerifyAccount() {
-  const [message, setMessage] = React.useState("");
+  const [message, setMessage] = useState("");
   const router = useRouter();
   const params = useParams<{ email: string }>();
   const {
