@@ -20,9 +20,9 @@ export default function Home() {
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <Link href="/sign-up">
-      <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+      <Button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
         Sign Up
-      </button>
+      </Button>
     </Link>
           
         </div>
