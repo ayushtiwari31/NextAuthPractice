@@ -1,5 +1,5 @@
 'use client';
-import React,{useState}  from 'react';
+import React from 'react';
 import { ApiResponse } from '@/types/ApiResponse';
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios, { AxiosError } from 'axios';
@@ -10,7 +10,6 @@ import { verifySchema } from '@/schemas/verifySchema';
 import {toast} from 'react-hot-toast'
 
 export default function VerifyAccount() {
-  const [message, setMessage] = useState("");
   const router = useRouter();
   const params = useParams<{ email: string }>();
   const {
