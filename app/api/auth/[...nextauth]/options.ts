@@ -4,6 +4,7 @@ import bcrypt from 'bcrypt';
 import { connectionToDatabase } from '@/lib/db';
 import UserModel from '@/models/User';
 
+
 export const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
@@ -14,8 +15,11 @@ export const authOptions: NextAuthOptions = {
         password: { label: 'Password', type: 'password' },
       },
 
-      async authorize(credentials: any): Promise<any> {
-        
+      async authorize(credentials?: Record<"email" | "password", string>): Promise<any> {
+        if (!credentials || !credentials.email || !credentials.password) {
+          throw new Error("Missing email or password");
+        }
+
         await connectionToDatabase();
         try {
           const user = await UserModel.findOne({
